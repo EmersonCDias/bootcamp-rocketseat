@@ -14,11 +14,11 @@ class User extends Model {
       },
       {
         sequelize,
-      }
+      },
     );
 
     // Trecho de código sempre executado
-    this.addHook('beforeSave', async user => {
+    this.addHook('beforeSave', async (user) => {
       if (user.password) {
         user.password_hash = await bcript.hash(user.password, 8);
       }
