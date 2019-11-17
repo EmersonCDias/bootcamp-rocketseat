@@ -3,6 +3,14 @@ import * as Yup from 'yup';
 import Admin from '../models/Admin';
 
 class AdminController {
+  async index(_, res) {
+    const allAdmins = await Admin.findAll({
+      attributes: ['id', 'name', 'email'],
+    });
+
+    res.json(allAdmins);
+  }
+
   async store(req, res) {
     const { email } = req.body;
     const schema = Yup.object().shape({
