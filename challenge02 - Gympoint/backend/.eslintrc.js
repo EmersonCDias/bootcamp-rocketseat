@@ -19,6 +19,7 @@ module.exports = {
     'no-param-reassign': [0],
     'arrow-parens': ['error', 'as-needed'],
     'arrow-body-style': [0],
+    'object-curly-newline': ['error', { minProperties: 3 }],
     camelcase: [0],
     strict: [0],
   },
