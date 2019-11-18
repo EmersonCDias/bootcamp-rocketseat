@@ -12,7 +12,6 @@ class AdminController {
   }
 
   async store(req, res) {
-    const { email } = req.body;
     const schema = Yup.object().shape({
       name: Yup.string().required(),
       email: Yup.string()
@@ -27,15 +26,14 @@ class AdminController {
       return res.status(400).json({ error: 'Validation fails' });
     }
 
+    const { email } = req.body;
     const adminExists = await Admin.findOne({ where: { email } });
 
     if (adminExists) {
       return res.status(400).json({ error: 'Admin already exists' });
     }
 
-    const admin = await Admin.create(req.body);
-
-    const { id, name } = admin;
+    const { id, name } = await Admin.create(req.body);
 
     return res.json({
       id,
