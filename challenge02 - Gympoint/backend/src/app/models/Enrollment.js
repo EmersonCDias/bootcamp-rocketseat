@@ -4,8 +4,6 @@ class Enrollments extends Model {
   static init(sequelize) {
     super.init(
       {
-        studentId: Sequelize.INTEGER,
-        planId: Sequelize.INTEGER,
         startDate: Sequelize.DATE,
         endDate: Sequelize.DATE,
         price: Sequelize.FLOAT,
@@ -14,6 +12,11 @@ class Enrollments extends Model {
         sequelize,
       }
     );
+  }
+
+  static associate(models) {
+    this.belongsTo(models.Student, { foreignKey: 'studentId' });
+    this.belongsTo(models.Plan, { foreignKey: 'planId' });
   }
 }
 
