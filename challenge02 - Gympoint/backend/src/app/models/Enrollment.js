@@ -16,7 +16,7 @@ class Enrollments extends Model {
 
   static associate(models) {
     this.belongsTo(models.Student, { foreignKey: 'studentId' });
-    // this.belongsTo(models.Plan, { foreignKey: 'planId' });
+    this.belongsTo(models.Plan, { foreignKey: 'planId' });
   }
 }
 

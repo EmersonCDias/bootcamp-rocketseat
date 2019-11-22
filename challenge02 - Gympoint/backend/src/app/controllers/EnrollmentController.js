@@ -21,18 +21,24 @@ class EnrollmentController {
   async store(req, res) {
     const { studentId, planId } = req.body;
 
-    // Check if Student exists
-    const studentExists = await Enrollment.findOne({
-      include: [
-        {
-          model: Student,
-          where: { id: studentId },
-        },
-      ],
+    const studentExists = await Student.findByPk(studentId);
+
+    if (!studentExists) {
+      return res.status(400).json({ error: 'Student not found' });
+    }
+
+    const studentIsAlreadyEnrolled = await Enrollment.findOne({
+      where: { studentId },
     });
 
-    if (studentExists === null) {
-      return res.status(400).json({ error: 'Student not found' });
+    if (studentIsAlreadyEnrolled) {
+      return res.status(400).json({ error: 'Student is already enrolled' });
+    }
+
+    const planExists = await Plan.findByPk(planId);
+
+    if (!planExists) {
+      return res.status(400).json({ error: 'Plan not found' });
     }
 
     const { startDate, endDate, price } = await Enrollment.create(req.body);
