@@ -51,6 +51,18 @@ class EnrollmentController {
       price,
     });
   }
+
+  async update(req, res) {
+    const { enrollmentId } = req.params;
+
+    const enrollmentExists = await Enrollment.findByPk(enrollmentId);
+
+    if (!enrollmentExists) {
+      return res.status(400).json({ error: 'Enrollment not found' });
+    }
+
+    return res.json({ msg: 'olá' });
+  }
 }
 
 export default new EnrollmentController();
