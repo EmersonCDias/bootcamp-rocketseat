@@ -1,10 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input } from '@rocketseat/unform';
+import * as Yup from 'yup';
 
 import Logo from '~/assets/logo.svg';
 
-// import { Container } from './styles';
+const schema = Yup.object().shape({
+  name: Yup.string().required('O campo Nome não pode ser vazio'),
+  email: Yup.string()
+    .email('Insira um E-mail válido')
+    .required('O campo E-mail não pode ser vazio'),
+  password: Yup.string()
+    .min(8, 'A Senha precisa de no mínimo 8 caracteres')
+    .required('O campo Senha não pode ser vazio'),
+});
 
 const SignUp = () => {
   function handleSubmit(data) {
@@ -15,7 +24,7 @@ const SignUp = () => {
     <>
       <img src={Logo} alt="GoBarber" />
 
-      <Form onSubmit={handleSubmit}>
+      <Form schema={schema} onSubmit={handleSubmit}>
         <Input name="name" placeholder="Nome completo" />
         <Input name="email" type="email" placeholder="E-mail" />
         <Input name="password" type="password" placeholder="Senha" />
