@@ -2,6 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-export default function Profile() {
+const Profile = () => {
   return <div>Profile</div>;
-}
+};
+
+export default Profile;

@@ -6,14 +6,12 @@ import './config/ReactotronConfig';
 import Routes from './routes';
 import history from './services/history';
 
-console.tron.log('Hello World');
-
-function App() {
+const App = () => {
   return (
     <Router history={history}>
       <Routes />
     </Router>
   );
-}
+};
 
 export default App;

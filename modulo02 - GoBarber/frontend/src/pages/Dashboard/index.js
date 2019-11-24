@@ -2,6 +2,8 @@ import React from 'react';
 
 // import { Container } from './styles';
 
-export default function Dashboard() {
+const Dashboard = () => {
   return <div>Dashboard</div>;
-}
+};
+
+export default Dashboard;
