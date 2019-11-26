@@ -1,0 +1,23 @@
+{
+  "stock": [],
+  "products": [
+    {
+      "id": 1,
+      "title": "Tênis de Caminhada",
+      "price": 179.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/26/HZM-1731-026/HZM-1731-026_detalhe1.jpg?resize=280:280"
+    },
+    {
+      "id": 2,
+      "title": "Tênis de Caminhada",
+      "price": 179.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/26/HZM-1731-026/HZM-1731-026_detalhe1.jpg?resize=280:280"
+    },
+    {
+      "id": 3,
+      "title": "Tênis de Caminhada",
+      "price": 179.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/26/HZM-1731-026/HZM-1731-026_detalhe1.jpg?resize=280:280"
+    }
+  ]
+}
