@@ -79,7 +79,7 @@ export const ProductTable = styled.table`
   }
 `;
 
-export const Total = styled.table`
+export const Total = styled.div`
   display: flex;
   align-items: baseline;
 

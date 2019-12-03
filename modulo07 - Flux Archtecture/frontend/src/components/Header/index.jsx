@@ -14,8 +14,6 @@ const Header = ({ cartSize }) => {
         <img src={Logo} alt="RocketShoes" />
       </Link>
 
-      {console.log('cartSize', cartSize)}
-
       <Cart to="/cart">
         <div>
           <strong>Meu carrinho</strong>

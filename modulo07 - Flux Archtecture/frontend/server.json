@@ -4,20 +4,32 @@
     {
       "id": 1,
       "title": "Tênis de Caminhada",
-      "price": 179.9,
+      "price": 139.9,
       "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/26/HZM-1731-026/HZM-1731-026_detalhe1.jpg?resize=280:280"
     },
     {
       "id": 2,
-      "title": "Tênis de Caminhada",
-      "price": 179.9,
-      "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/26/HZM-1731-026/HZM-1731-026_detalhe1.jpg?resize=280:280"
+      "title": "Tênis de Corrida",
+      "price": 159.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-nike-shox-nz-eu-masculino/14/D12-9970-014/D12-9970-014_detalhe1.jpg?resize=280:280"
     },
     {
       "id": 3,
-      "title": "Tênis de Caminhada",
-      "price": 179.9,
-      "image": "https://static.netshoes.com.br/produtos/tenis-nike-revolution-5-masculino/26/HZM-1731-026/HZM-1731-026_detalhe1.jpg?resize=280:280"
+      "title": "Tênis pra Sentar",
+      "price": 169.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-adidas-duramo-lite-2-0-masculino/28/COL-3586-128/COL-3586-128_detalhe1.jpg?resize=280:280"
+    },
+    {
+      "id": 4,
+      "title": "Tênis pra Pular",
+      "price": 109.9,
+      "image": "https://static.netshoes.com.br/produtos/chuteira-futsal-nike-beco-2-futsal/26/004-5830-026/004-5830-026_detalhe1.jpg?resize=280:280"
+    },
+    {
+      "id": 5,
+      "title": "Tênis pra Dançar",
+      "price": 409.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-olympikus-attract/20/D22-1787-120/D22-1787-120_detalhe1.jpg?resize=280:280"
     }
   ]
 }
